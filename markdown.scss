@@ -1,0 +1,88 @@
+$font-stack-display: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+$font-stack-text: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+$font-stack-mono: IBM Plex Mono, monospace;
+$spacing: 0.75rem;
+$theme-color: #dcdcdc;
+$transition-enabled: true;
+$transition-time: 200ms;
+
+.markdown {
+  h1,
+  h2,
+  h3 {
+    font-family: $font-stack-display;
+    margin-bottom: $spacing;
+  }
+  p {
+    font-family: $font-stack-text;
+    margin-bottom: $spacing;
+  }
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.625rem;
+  }
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.375rem;
+  }
+  h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.16px;
+    line-height: 1.125rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    letter-spacing: 0.16px;
+    line-height: 1.25rem;
+  }
+
+  blockquote {
+    border-left: 2px solid $theme-color;
+    @if $transition-enabled == true {
+      transition: border-color $transition-time,
+        background-color $transition-time;
+    }
+    padding-left: 12px;
+  }
+
+  em {
+    font-display: italic;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  ul,
+  ol {
+    margin-left: 2 * $spacing;
+    list-style-position: outside;
+    margin-bottom: $spacing;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  code {
+    background-color: $theme-color;
+    font-family: $font-stack-mono;
+    padding: 0 0.5 * $spacing;
+  }
+  pre {
+    background-color: $theme-color;
+    padding: $spacing;
+    code {
+      padding: 0;
+    }
+  }
+}
